@@ -1,0 +1,514 @@
+<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}@keyframes pulse-subtle{0%,100%{opacity:0.35;transform:scale(0.98);}50%{opacity:0.8;transform:scale(1.03);}}@keyframes wave-bounce{0%,100%{height:4px;}50%{height:14px;}}@keyframes twinkle{0%,100%{opacity:0.2;}50%{opacity:0.85;}}.animate-subtle-glow{animation:pulse-subtle 4s ease-in-out infinite;}.sound-bar-1{animation:wave-bounce 1.2s ease-in-out infinite;}.sound-bar-2{animation:wave-bounce 1.4s ease-in-out 0.2s infinite;}.sound-bar-3{animation:wave-bounce 1s ease-in-out 0.4s infinite;}.twinkle-point{animation:twinkle 3s ease-in-out infinite;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"error-container":"#93000a","on-secondary":"#3c2f00","surface-container":"#38131f","tertiary-fixed":"#ffd7f1","primary-fixed-dim":"#ffb1c4","surface-container-high":"#451d29","on-secondary-fixed-variant":"#574500","inverse-primary":"#94445d","on-surface":"#ffd9e0","on-tertiary-fixed":"#2d1128","inverse-surface":"#ffd9e0","error":"#ffb4ab","tertiary":"#e6bad8","background":"#290713","primary-fixed":"#ffd9e1","secondary-container":"#af8d11","on-background":"#ffd9e0","on-tertiary":"#44263e","surface-container-lowest":"#22030d","on-primary":"#5a162f","surface-bright":"#572c38","on-error":"#690005","on-error-container":"#ffdad6","inverse-on-surface":"#4d232f","on-tertiary-fixed-variant":"#5d3c55","on-secondary-fixed":"#241a00","on-primary-container":"#631d36","outline-variant":"#534246","on-primary-fixed-variant":"#772d45","surface-dim":"#290713","tertiary-container":"#bd94b0","outline":"#a08c8f","on-primary-fixed":"#3e011a","surface-container-low":"#330f1b","on-secondary-container":"#342800","surface-container-highest":"#522834","secondary-fixed":"#ffe088","secondary":"#e9c349","primary-container":"#e2849e","surface":"#290713","surface-tint":"#ffb1c4","tertiary-fixed-dim":"#e6bad8","primary":"#ffb1c4","on-surface-variant":"#d8c1c5","surface-variant":"#522834","secondary-fixed-dim":"#e9c349","on-tertiary-container":"#4c2d44"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"gutter-mobile":"1rem","space-xs":"0.375rem","space-lg":"2rem","space-sm":"0.75rem","space-xl":"3.5rem","margin-mobile":"1.25rem",margin:"3rem","space-md":"1.25rem",gutter:"1.5rem"},fontFamily:{"display-lg":["Playfair Display"],"headline-md":["Playfair Display"],"label-md":["Plus Jakarta Sans"],"title-lg":["Playfair Display"],"body-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-lg":["Playfair Display"],"label-sm":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"display-lg-mobile":["Playfair Display"],"headline-lg-mobile":["Playfair Display"],"title-md":["Plus Jakarta Sans"]},fontSize:{"display-lg":["56px",{lineHeight:"64px",letterSpacing:"-0.02em",fontWeight:"400"}],"headline-md":["24px",{lineHeight:"32px",letterSpacing:"0em",fontWeight:"400"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.08em",fontWeight:"600"}],"title-lg":["20px",{lineHeight:"28px",letterSpacing:"0.01em",fontWeight:"600"}],"body-lg":["18px",{lineHeight:"28px",letterSpacing:"0.01em",fontWeight:"300"}],"body-md":["15px",{lineHeight:"24px",letterSpacing:"0.01em",fontWeight:"400"}],"headline-lg":["36px",{lineHeight:"44px",letterSpacing:"-0.01em",fontWeight:"500"}],"label-sm":["10px",{lineHeight:"14px",letterSpacing:"0.1em",fontWeight:"500"}],"body-sm":["13px",{lineHeight:"20px",letterSpacing:"0.02em",fontWeight:"400"}],"display-lg-mobile":["36px",{lineHeight:"44px",letterSpacing:"-0.01em",fontWeight:"400"}],"headline-lg-mobile":["28px",{lineHeight:"36px",letterSpacing:"0em",fontWeight:"500"}],"title-md":["16px",{lineHeight:"24px",letterSpacing:"0.01em",fontWeight:"600"}]}}}};</script></head><body class="bg-surface text-on-surface font-body-md text-body-md selection:bg-primary-container selection:text-on-primary-container relative overflow-x-hidden min-h-screen"><div class="pointer-events-none fixed inset-0 z-0 overflow-hidden"><div class="absolute -top-32 left-1/4 w-96 h-96 rounded-full bg-surface-bright/20 blur-3xl animate-subtle-glow"></div><div class="absolute top-1/2 -right-24 w-80 h-80 rounded-full bg-primary-container/10 blur-3xl animate-subtle-glow" style="animation-delay: 2s;"></div><div class="absolute bottom-10 left-10 w-72 h-72 rounded-full bg-secondary-container/10 blur-3xl"></div><div class="twinkle-point absolute top-12 left-1/6 w-1 h-1 rounded-full bg-secondary-fixed opacity-60"></div><div class="twinkle-point absolute top-28 right-1/4 w-1.5 h-1.5 rounded-full bg-primary-fixed opacity-70" style="animation-delay: 1.5s;"></div><div class="twinkle-point absolute top-2/3 left-1/3 w-1 h-1 rounded-full bg-tertiary-fixed opacity-50" style="animation-delay: 0.7s;"></div><div class="twinkle-point absolute bottom-32 right-12 w-1.5 h-1.5 rounded-full bg-secondary-fixed opacity-80" style="animation-delay: 2.2s;"></div></div><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_4px_30px_rgba(34,3,13,0.5)]"><div class="h-20 max-w-[1180px] mx-auto px-gutter-mobile lg:px-gutter flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center text-secondary shadow-[0_0_16px_rgba(233,195,73,0.2)]"><span class="material-symbols-outlined text-[20px]">auto_awesome</span></div><div class="flex flex-col"><a class="font-title-lg text-title-lg text-on-surface hover:text-primary transition-colors tracking-tight" data-path="welcome" href="#">To My Favorite Person</a><span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase opacity-85">A Universe Made For You</span></div></div><nav class="hidden xl:flex items-center gap-1 bg-surface-container-low/70 px-space-xs py-1 rounded-full backdrop-blur-md" data-active-classes="bg-surface-container-high text-on-surface shadow-[0_0_20px_rgba(233,195,73,0.15)]"><a class="px-space-sm py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="welcome" href="#">Welcome</a><a class="px-space-sm py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="memories" href="#">Memories</a><a class="px-space-sm py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="our-story" href="#">Our Story</a><a class="px-space-sm py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="a-letter" href="#">A Letter</a><a aria-current="page" class="px-space-sm py-1.5 rounded-full font-label-md transition-all bg-surface-container-high text-on-surface shadow-[0_0_20px_rgba(233,195,73,0.15)]" data-path="why-you" href="#">Why You</a><a class="px-space-sm py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="birthday-wish" href="#">Birthday Wish</a><a class="px-space-sm py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="final-starlight" href="#">Final Starlight</a></nav><div class="flex items-center gap-space-sm"><div class="group relative"><button class="flex items-center gap-2 px-space-sm py-1.5 rounded-full bg-surface-container-low hover:bg-surface-container-high hover:text-on-surface text-on-surface-variant transition-all" type="button"><span class="material-symbols-outlined text-[18px] text-secondary">headphones</span><div class="flex items-end gap-0.5 h-3.5 px-0.5"><span class="w-0.5 bg-secondary rounded-full sound-bar-1"></span><span class="w-0.5 bg-primary rounded-full sound-bar-2"></span><span class="w-0.5 bg-secondary rounded-full sound-bar-3"></span></div></button><div class="absolute right-0 top-full mt-2 hidden group-hover:flex flex-col items-center pointer-events-none z-50"><div class="bg-surface-container-highest px-space-sm py-1 rounded-lg shadow-xl whitespace-nowrap"><span class="font-label-sm text-label-sm text-on-surface">Best experienced with headphones on 🎧</span></div></div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative z-10 w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<div class="relative w-full overflow-hidden pb-space-xl">
+<!-- Atmospheric Ambient Glows & Constellation Vignettes -->
+<div class="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 w-[700px] h-[340px] bg-gradient-to-b from-primary-container/15 via-secondary/10 to-transparent blur-3xl opacity-60"></div>
+<div class="pointer-events-none absolute top-1/3 -left-32 w-80 h-80 rounded-full bg-surface-bright/20 blur-3xl"></div>
+<div class="pointer-events-none absolute bottom-10 -right-20 w-96 h-96 rounded-full bg-tertiary-container/15 blur-3xl"></div>
+<div class="max-w-[1180px] mx-auto px-gutter-mobile lg:px-gutter relative z-10">
+<!-- Curated Header Vignette -->
+<div class="pt-6 pb-space-lg flex flex-col items-center text-center relative">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-high/60 backdrop-blur-md shadow-sm mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-label-md text-label-md text-secondary tracking-widest uppercase">Chapter 05 • The Celestial Ledger</span>
+</div>
+<div class="relative max-w-3xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            A Few Reasons Why You Are My World
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-xs font-light">
+            Out of eight billion people, here is why it is always you.
+          </p>
+</div>
+<!-- Instruction Pill with Audio-Visual Cue -->
+<div class="mt-space-md inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-lowest/70 backdrop-blur-md shadow-md">
+<span class="material-symbols-outlined text-[18px] text-primary animate-pulse">touch_app</span>
+<span class="font-body-sm text-body-sm text-on-surface tracking-wide">
+            Tap each keepsake card to unfold the words written for your heart
+          </span>
+<div class="flex items-center gap-1 pl-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary-fixed" id="revealed-counter">0 / 6 Revealed</span>
+</div>
+</div>
+</div>
+<!-- Card Mosaic Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md pt-space-xs" id="cards-container">
+<!-- Card 1: Your Smile -->
+<div class="group relative perspective-1000 min-h-[360px] cursor-pointer" data-card-id="1" onclick="toggleCard(this)">
+<div class="card-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d]">
+<!-- Front Face -->
+<div class="absolute inset-0 rounded-xl bg-surface-container/60 backdrop-blur-xl p-space-lg flex flex-col justify-between shadow-xl [backface-visibility:hidden] overflow-hidden group-hover:-translate-y-1 transition-all duration-300">
+<div class="absolute -top-16 -right-16 w-36 h-36 rounded-full bg-primary-container/20 blur-2xl"></div>
+<div class="flex items-center justify-between z-10">
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider">No. 01 • Radiance</span>
+<div class="w-8 h-8 rounded-full bg-surface-container-high/80 flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[18px]">sentiment_satisfied</span>
+</div>
+</div>
+<div class="my-auto py-space-sm z-10">
+<h3 class="font-title-lg text-title-lg text-primary-fixed mb-2">Your Smile</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">The luminous spark that anchors every sunrise and stills the quiet nights.</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs z-10">
+<span class="font-label-sm text-label-sm text-secondary opacity-75">Touch to Unfold</span>
+<span class="material-symbols-outlined text-[20px] text-secondary transition-transform group-hover:scale-125">lock_open</span>
+</div>
+</div>
+<!-- Back Face (Revealed) -->
+<div class="absolute inset-0 rounded-xl bg-surface-container-high/90 backdrop-blur-2xl p-space-lg flex flex-col justify-between shadow-2xl [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider">Cherished Note</span>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors p-1" onclick="event.stopPropagation(); editReason(this, 'Your Smile')" title="Personalize note" type="button">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</button>
+</div>
+<div class="my-auto py-space-sm">
+<p class="font-headline-md text-headline-md text-on-surface italic font-light leading-relaxed card-note-text">
+                  “The kind that crinkles the corners of your eyes and instantly makes any bad day disappear into thin air.”
+                </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-primary">Always in my heart</span>
+<span class="material-symbols-outlined text-[18px] text-primary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2: Your Kindness -->
+<div class="group relative perspective-1000 min-h-[360px] cursor-pointer" data-card-id="2" onclick="toggleCard(this)">
+<div class="card-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d]">
+<!-- Front Face -->
+<div class="absolute inset-0 rounded-xl bg-surface-container/60 backdrop-blur-xl p-space-lg flex flex-col justify-between shadow-xl [backface-visibility:hidden] overflow-hidden group-hover:-translate-y-1 transition-all duration-300">
+<div class="absolute -bottom-16 -left-16 w-36 h-36 rounded-full bg-secondary-container/20 blur-2xl"></div>
+<div class="flex items-center justify-between z-10">
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider">No. 02 • Grace</span>
+<div class="w-8 h-8 rounded-full bg-surface-container-high/80 flex items-center justify-center text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[18px]">nature_people</span>
+</div>
+</div>
+<div class="my-auto py-space-sm z-10">
+<h3 class="font-title-lg text-title-lg text-primary-fixed mb-2">Your Kindness</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">A boundless tenderness carried effortlessly without demanding anything in return.</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs z-10">
+<span class="font-label-sm text-label-sm text-secondary opacity-75">Touch to Unfold</span>
+<span class="material-symbols-outlined text-[20px] text-secondary transition-transform group-hover:scale-125">lock_open</span>
+</div>
+</div>
+<!-- Back Face (Revealed) -->
+<div class="absolute inset-0 rounded-xl bg-surface-container-high/90 backdrop-blur-2xl p-space-lg flex flex-col justify-between shadow-2xl [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider">Cherished Note</span>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors p-1" onclick="event.stopPropagation(); editReason(this, 'Your Kindness')" title="Personalize note" type="button">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</button>
+</div>
+<div class="my-auto py-space-sm">
+<p class="font-headline-md text-headline-md text-on-surface italic font-light leading-relaxed card-note-text">
+                  “How you treat animals, stray thoughts, and people who can do nothing for you. You have the softest heart I know.”
+                </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-primary">Unconditional warmth</span>
+<span class="material-symbols-outlined text-[18px] text-primary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3: Ordinary Days -->
+<div class="group relative perspective-1000 min-h-[360px] cursor-pointer" data-card-id="3" onclick="toggleCard(this)">
+<div class="card-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d]">
+<!-- Front Face -->
+<div class="absolute inset-0 rounded-xl bg-surface-container/60 backdrop-blur-xl p-space-lg flex flex-col justify-between shadow-xl [backface-visibility:hidden] overflow-hidden group-hover:-translate-y-1 transition-all duration-300">
+<div class="absolute top-10 right-0 w-32 h-32 rounded-full bg-tertiary-container/20 blur-2xl"></div>
+<div class="flex items-center justify-between z-10">
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider">No. 03 • Magic</span>
+<div class="w-8 h-8 rounded-full bg-surface-container-high/80 flex items-center justify-center text-tertiary shadow-sm">
+<span class="material-symbols-outlined text-[18px]">arrow_back_ios_new</span>
+</div>
+</div>
+<div class="my-auto py-space-sm z-10">
+<h3 class="font-title-lg text-title-lg text-primary-fixed mb-2">Ordinary Days Made Special</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">How the simplest mundane minutes transform into unforgettable memories with you.</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs z-10">
+<span class="font-label-sm text-label-sm text-secondary opacity-75">Touch to Unfold</span>
+<span class="material-symbols-outlined text-[20px] text-secondary transition-transform group-hover:scale-125">lock_open</span>
+</div>
+</div>
+<!-- Back Face (Revealed) -->
+<div class="absolute inset-0 rounded-xl bg-surface-container-high/90 backdrop-blur-2xl p-space-lg flex flex-col justify-between shadow-2xl [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider">Cherished Note</span>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors p-1" onclick="event.stopPropagation(); editReason(this, 'How You Make Ordinary Days Special')" title="Personalize note" type="button">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</button>
+</div>
+<div class="my-auto py-space-sm">
+<p class="font-headline-md text-headline-md text-on-surface italic font-light leading-relaxed card-note-text">
+                  “Turning a grocery trip into an adventure and making sitting in traffic feel like the best date of the year.”
+                </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-primary">Every second with you</span>
+<span class="material-symbols-outlined text-[18px] text-primary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 4: Understanding -->
+<div class="group relative perspective-1000 min-h-[360px] cursor-pointer" data-card-id="4" onclick="toggleCard(this)">
+<div class="card-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d]">
+<!-- Front Face -->
+<div class="absolute inset-0 rounded-xl bg-surface-container/60 backdrop-blur-xl p-space-lg flex flex-col justify-between shadow-xl [backface-visibility:hidden] overflow-hidden group-hover:-translate-y-1 transition-all duration-300">
+<div class="absolute -top-10 left-10 w-36 h-36 rounded-full bg-primary-container/20 blur-2xl"></div>
+<div class="flex items-center justify-between z-10">
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider">No. 04 • Sanctuary</span>
+<div class="w-8 h-8 rounded-full bg-surface-container-high/80 flex items-center justify-center text-primary-fixed shadow-sm">
+<span class="material-symbols-outlined text-[18px]">shield_with_heart</span>
+</div>
+</div>
+<div class="my-auto py-space-sm z-10">
+<h3 class="font-title-lg text-title-lg text-primary-fixed mb-2">The Way You Understand Me</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">The intuitive peace that exists between us, quiet and profoundly safe.</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs z-10">
+<span class="font-label-sm text-label-sm text-secondary opacity-75">Touch to Unfold</span>
+<span class="material-symbols-outlined text-[20px] text-secondary transition-transform group-hover:scale-125">lock_open</span>
+</div>
+</div>
+<!-- Back Face (Revealed) -->
+<div class="absolute inset-0 rounded-xl bg-surface-container-high/90 backdrop-blur-2xl p-space-lg flex flex-col justify-between shadow-2xl [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider">Cherished Note</span>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors p-1" onclick="event.stopPropagation(); editReason(this, 'The Way You Understand Me')" title="Personalize note" type="button">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</button>
+</div>
+<div class="my-auto py-space-sm">
+<p class="font-headline-md text-headline-md text-on-surface italic font-light leading-relaxed card-note-text">
+                  “When you know what I'm thinking without a single word being spoken. You are my safest harbor.”
+                </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-primary">My sanctuary</span>
+<span class="material-symbols-outlined text-[18px] text-primary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 5: Passion & Drive -->
+<div class="group relative perspective-1000 min-h-[360px] cursor-pointer" data-card-id="5" onclick="toggleCard(this)">
+<div class="card-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d]">
+<!-- Front Face -->
+<div class="absolute inset-0 rounded-xl bg-surface-container/60 backdrop-blur-xl p-space-lg flex flex-col justify-between shadow-xl [backface-visibility:hidden] overflow-hidden group-hover:-translate-y-1 transition-all duration-300">
+<div class="absolute bottom-0 right-0 w-36 h-36 rounded-full bg-secondary/15 blur-2xl"></div>
+<div class="flex items-center justify-between z-10">
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider">No. 05 • Constellation</span>
+<div class="w-8 h-8 rounded-full bg-surface-container-high/80 flex items-center justify-center text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[18px]">flare</span>
+</div>
+</div>
+<div class="my-auto py-space-sm z-10">
+<h3 class="font-title-lg text-title-lg text-primary-fixed mb-2">Your Passion &amp; Drive</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">The relentless fire with which you chase horizons and craft your future.</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs z-10">
+<span class="font-label-sm text-label-sm text-secondary opacity-75">Touch to Unfold</span>
+<span class="material-symbols-outlined text-[20px] text-secondary transition-transform group-hover:scale-125">lock_open</span>
+</div>
+</div>
+<!-- Back Face (Revealed) -->
+<div class="absolute inset-0 rounded-xl bg-surface-container-high/90 backdrop-blur-2xl p-space-lg flex flex-col justify-between shadow-2xl [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider">Cherished Note</span>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors p-1" onclick="event.stopPropagation(); editReason(this, 'Your Passion &amp; Drive')" title="Personalize note" type="button">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</button>
+</div>
+<div class="my-auto py-space-sm">
+<p class="font-headline-md text-headline-md text-on-surface italic font-light leading-relaxed card-note-text">
+                  “The starlight in your eyes whenever you talk about the things you love and dream of building.”
+                </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-primary">In awe of you</span>
+<span class="material-symbols-outlined text-[18px] text-primary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 6: Quirks -->
+<div class="group relative perspective-1000 min-h-[360px] cursor-pointer" data-card-id="6" onclick="toggleCard(this)">
+<div class="card-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d]">
+<!-- Front Face -->
+<div class="absolute inset-0 rounded-xl bg-surface-container/60 backdrop-blur-xl p-space-lg flex flex-col justify-between shadow-xl [backface-visibility:hidden] overflow-hidden group-hover:-translate-y-1 transition-all duration-300">
+<div class="absolute -top-12 -right-12 w-36 h-36 rounded-full bg-primary/20 blur-2xl"></div>
+<div class="flex items-center justify-between z-10">
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider">No. 06 • Treasure</span>
+<div class="w-8 h-8 rounded-full bg-surface-container-high/80 flex items-center justify-center text-tertiary-fixed shadow-sm">
+<span class="material-symbols-outlined text-[18px]">fingerprint</span>
+</div>
+</div>
+<div class="my-auto py-space-sm z-10">
+<h3 class="font-title-lg text-title-lg text-primary-fixed mb-2">The Little Quirks Only I Know</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">The delicate, intimate subtleties that render you completely irreplaceable.</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs z-10">
+<span class="font-label-sm text-label-sm text-secondary opacity-75">Touch to Unfold</span>
+<span class="material-symbols-outlined text-[20px] text-secondary transition-transform group-hover:scale-125">lock_open</span>
+</div>
+</div>
+<!-- Back Face (Revealed) -->
+<div class="absolute inset-0 rounded-xl bg-surface-container-high/90 backdrop-blur-2xl p-space-lg flex flex-col justify-between shadow-2xl [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider">Cherished Note</span>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors p-1" onclick="event.stopPropagation(); editReason(this, 'The Little Quirks Only I Know')" title="Personalize note" type="button">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</button>
+</div>
+<div class="my-auto py-space-sm">
+<p class="font-headline-md text-headline-md text-on-surface italic font-light leading-relaxed card-note-text">
+                  “Your funny victory dances, the way you tuck your hair when you're focusing, and every little habit that makes you uniquely you.”
+                </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-primary">Wholly enchanted</span>
+<span class="material-symbols-outlined text-[18px] text-primary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Footer: Add Another Reason + Editorial Keepsake Vignette -->
+<div class="mt-space-lg pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md bg-surface-container-lowest/80 backdrop-blur-xl p-space-lg rounded-xl shadow-2xl">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-secondary shadow-[0_0_20px_rgba(233,195,73,0.25)]">
+<span class="material-symbols-outlined text-[24px]">auto_stories</span>
+</div>
+<div class="flex flex-col">
+<h4 class="font-title-lg text-title-lg text-on-surface">The Celestial Anthology Is Endless</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">There are ten thousand other quiet reasons stored in the constellations between us.</span>
+</div>
+</div>
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-lg py-3 rounded-xl bg-gradient-to-r from-primary-container to-inverse-primary text-on-primary font-title-md text-title-md shadow-xl hover:shadow-[0_0_24px_rgba(226,132,158,0.45)] hover:scale-[1.02] active:scale-[0.98] transition-all" onclick="openAddModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span class="">Add Another Reason (+)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Interactive Add / Edit Modal -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-surface-container-lowest/80 backdrop-blur-2xl opacity-0 pointer-events-none transition-opacity duration-300" id="reason-modal">
+<div class="relative w-full max-w-lg bg-surface-container-high rounded-xl p-space-lg shadow-2xl transform scale-95 transition-transform duration-300" id="modal-box">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">favorite</span>
+<h3 class="font-title-lg text-title-lg text-primary-fixed" id="modal-heading">Inscribe a New Reason</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" onclick="closeReasonModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="space-y-space-md">
+<div>
+<label class="block font-label-md text-label-md text-secondary-fixed uppercase tracking-wider mb-1">Theme / Title</label>
+<input class="w-full px-space-sm py-2 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md placeholder-on-surface-variant/40 focus:outline-none focus:ring-1 focus:ring-secondary" id="reason-title-input" placeholder="e.g., The Sound of Your Laughter" type="text">
+</div>
+<div>
+<label class="block font-label-md text-label-md text-secondary-fixed uppercase tracking-wider mb-1">Your Personal Note</label>
+<textarea class="w-full px-space-sm py-2 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md placeholder-on-surface-variant/40 focus:outline-none focus:ring-1 focus:ring-secondary resize-none" id="reason-note-input" placeholder="Pour your quiet thoughts here..." rows="4"></textarea>
+</div>
+</div>
+<div class="mt-space-lg flex items-center justify-end gap-space-sm">
+<button class="px-space-md py-2 rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-highest transition-colors" onclick="closeReasonModal()" type="button">
+          Cancel
+        </button>
+<button class="px-space-lg py-2 rounded-lg bg-gradient-to-r from-primary-container to-inverse-primary text-on-primary font-label-md text-label-md tracking-wider shadow-md hover:shadow-lg transition-all" onclick="saveReason()" type="button">
+          Seal into Ledger
+        </button>
+</div>
+</div>
+</div>
+<script>
+    let flippedCards = new Set();
+    let currentEditTarget = null;
+    let cardCount = 6;
+
+    function toggleCard(cardWrapper) {
+      const inner = cardWrapper.querySelector('.card-inner');
+      const cardId = cardWrapper.getAttribute('data-card-id');
+      const isCurrentlyFlipped = inner.style.transform === 'rotateY(180deg)';
+
+      if (!isCurrentlyFlipped) {
+        inner.style.transform = 'rotateY(180deg)';
+        triggerHeartBurst(cardWrapper);
+        flippedCards.add(cardId);
+      } else {
+        inner.style.transform = 'rotateY(0deg)';
+      }
+      updateRevealedCounter();
+    }
+
+    function updateRevealedCounter() {
+      const counter = document.getElementById('revealed-counter');
+      if (counter) {
+        counter.textContent = `${flippedCards.size} / ${cardCount} Revealed`;
+      }
+    }
+
+    function triggerHeartBurst(element) {
+      const burstContainer = document.createElement('div');
+      burstContainer.className = 'pointer-events-none absolute inset-0 z-30 flex items-center justify-center overflow-hidden';
+      
+      for (let i = 0; i < 7; i++) {
+        const heart = document.createElement('span');
+        heart.className = 'material-symbols-outlined absolute text-[20px] text-primary transition-all duration-700 ease-out opacity-90';
+        heart.innerText = 'favorite';
+        heart.style.fontVariationSettings = "'FILL' 1";
+        
+        const angle = (i / 7) * 2 * Math.PI;
+        const distance = 40 + Math.random() * 60;
+        const tx = Math.cos(angle) * distance;
+        const ty = Math.sin(angle) * distance;
+        
+        burstContainer.appendChild(heart);
+        
+        requestAnimationFrame(() => {
+          heart.style.transform = `translate(${tx}px, ${ty}px) scale(${0.4 + Math.random() * 0.6})`;
+          heart.style.opacity = '0';
+        });
+      }
+      
+      element.appendChild(burstContainer);
+      setTimeout(() => {
+        burstContainer.remove();
+      }, 750);
+    }
+
+    function openAddModal() {
+      currentEditTarget = null;
+      document.getElementById('modal-heading').innerText = 'Inscribe a New Reason';
+      document.getElementById('reason-title-input').value = '';
+      document.getElementById('reason-note-input').value = '';
+      
+      const modal = document.getElementById('reason-modal');
+      const box = document.getElementById('modal-box');
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      modal.classList.add('opacity-100');
+      box.classList.remove('scale-95');
+      box.classList.add('scale-100');
+    }
+
+    function editReason(buttonElement, defaultTitle) {
+      const card = buttonElement.closest('[data-card-id]');
+      currentEditTarget = card;
+      const currentNote = card.querySelector('.card-note-text').innerText.replace(/[“”"]/g, '').trim();
+      
+      document.getElementById('modal-heading').innerText = 'Personalize This Memory';
+      document.getElementById('reason-title-input').value = defaultTitle;
+      document.getElementById('reason-note-input').value = currentNote;
+      
+      const modal = document.getElementById('reason-modal');
+      const box = document.getElementById('modal-box');
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      modal.classList.add('opacity-100');
+      box.classList.remove('scale-95');
+      box.classList.add('scale-100');
+    }
+
+    function closeReasonModal() {
+      const modal = document.getElementById('reason-modal');
+      const box = document.getElementById('modal-box');
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      modal.classList.remove('opacity-100');
+      box.classList.add('scale-95');
+      box.classList.remove('scale-100');
+    }
+
+    function saveReason() {
+      const title = document.getElementById('reason-title-input').value.trim() || 'A Quiet Miracle';
+      const note = document.getElementById('reason-note-input').value.trim() || 'A reason so pure it needs no words to be felt in full.';
+
+      if (currentEditTarget) {
+        currentEditTarget.querySelector('.card-note-text').innerHTML = `&ldquo;${note}&rdquo;`;
+      } else {
+        cardCount++;
+        const newCardId = cardCount;
+        const container = document.getElementById('cards-container');
+        
+        const newCard = document.createElement('div');
+        newCard.className = 'group relative perspective-1000 min-h-[360px] cursor-pointer';
+        newCard.setAttribute('onclick', 'toggleCard(this)');
+        newCard.setAttribute('data-card-id', newCardId);
+        
+        newCard.innerHTML = `
+          <div class="card-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d]">
+            <div class="absolute inset-0 rounded-xl bg-surface-container/60 backdrop-blur-xl p-space-lg flex flex-col justify-between shadow-xl [backface-visibility:hidden] overflow-hidden group-hover:-translate-y-1 transition-all duration-300">
+              <div class="absolute -top-12 -right-12 w-36 h-36 rounded-full bg-secondary/15 blur-2xl"></div>
+              <div class="flex items-center justify-between z-10">
+                <span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider">No. 0${newCardId} &bull; Infinite</span>
+                <div class="w-8 h-8 rounded-full bg-surface-container-high/80 flex items-center justify-center text-primary shadow-sm">
+                  <span class="material-symbols-outlined text-[18px]">favorite</span>
+                </div>
+              </div>
+              <div class="my-auto py-space-sm z-10">
+                <h3 class="font-title-lg text-title-lg text-primary-fixed mb-2">${title}</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">${note}</p>
+              </div>
+              <div class="flex items-center justify-between pt-space-xs z-10">
+                <span class="font-label-sm text-label-sm text-secondary opacity-75">Touch to Unfold</span>
+                <span class="material-symbols-outlined text-[20px] text-secondary transition-transform group-hover:scale-125">lock_open</span>
+              </div>
+            </div>
+            <div class="absolute inset-0 rounded-xl bg-surface-container-high/90 backdrop-blur-2xl p-space-lg flex flex-col justify-between shadow-2xl [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-hidden">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-[16px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider">Cherished Note</span>
+                </div>
+                <button type="button" onclick="event.stopPropagation(); editReason(this, '${title}')" class="text-on-surface-variant hover:text-primary transition-colors p-1" title="Personalize note">
+                  <span class="material-symbols-outlined text-[18px]">edit_note</span>
+                </button>
+              </div>
+              <div class="my-auto py-space-sm">
+                <p class="font-headline-md text-headline-md text-on-surface italic font-light leading-relaxed card-note-text">
+                  &ldquo;${note}&rdquo;
+                </p>
+              </div>
+              <div class="flex items-center justify-between pt-space-xs">
+                <span class="font-label-sm text-label-sm text-primary">Forever written</span>
+                <span class="material-symbols-outlined text-[18px] text-primary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+              </div>
+            </div>
+          </div>
+        `;
+        container.appendChild(newCard);
+      }
+      
+      closeReasonModal();
+      updateRevealedCounter();
+    }
+  </script>
+</div></main><footer class="relative z-10 w-full bg-surface-container-lowest/80 backdrop-blur-md py-space-lg"><div class="max-w-[1180px] mx-auto px-gutter-mobile lg:px-gutter flex flex-col md:flex-row items-center justify-between gap-space-md text-center md:text-left"><div class="flex flex-col gap-0.5"><span class="font-headline-md text-headline-md text-primary-fixed">Written in the Stars for Your Birthday</span><span class="font-body-sm text-body-sm text-on-surface-variant">Handcrafted with timeless love and midnight stardust</span></div><div class="flex items-center gap-space-sm"><span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span><span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider">Our Universe Is Endless</span></div></div></footer><aside aria-label="Celestial Audio Companion" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-[680px] bg-surface-container-lowest/80 backdrop-blur-xl border border-primary/20 rounded-full px-space-md py-2.5 shadow-[0_4px_30px_rgba(34,3,13,0.5)] flex items-center justify-between gap-space-sm transition-all duration-300 hover:shadow-[0_0_24px_rgba(226,132,158,0.45)]" id="romantic-audio-player"><div class="flex items-center gap-space-sm min-w-0"><div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center text-secondary shadow-[0_0_16px_rgba(233,195,73,0.2)] shrink-0"><span class="material-symbols-outlined text-[18px] text-secondary">music_note</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-1.5"><span class="font-title-md text-body-sm text-on-surface truncate">Nocturne in Rose (Gentle Piano Melody)</span><div class="flex items-end gap-0.5 h-3 px-0.5 shrink-0" id="player-wave"><span class="w-0.5 bg-secondary rounded-full sound-bar-1"></span><span class="w-0.5 bg-primary rounded-full sound-bar-2"></span><span class="w-0.5 bg-secondary rounded-full sound-bar-3"></span></div></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Playing soft ambient piano • In your honor</span></div></div><div class="flex items-center gap-space-sm shrink-0"><div class="hidden sm:flex items-center gap-2"><span class="font-label-sm text-label-sm text-secondary-fixed" id="music-time-display">01:24</span><div class="w-24 h-1.5 bg-surface-container rounded-full overflow-hidden relative cursor-pointer"><div class="h-full bg-gradient-to-r from-secondary to-primary rounded-full w-[42%]"></div></div><span class="font-label-sm text-label-sm text-on-surface-variant">03:45</span></div><button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-secondary hover:bg-surface-container-high transition-colors" onclick="const isMuted = this.querySelector('span').innerText === 'volume_off'; this.querySelector('span').innerText = isMuted ? 'volume_up' : 'volume_off';" title="Toggle Sound" type="button"><span class="material-symbols-outlined text-[18px]">volume_up</span></button><button class="w-9 h-9 rounded-full bg-gradient-to-r from-primary-container to-inverse-primary flex items-center justify-center text-on-primary shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all" onclick="const icon = this.querySelector('span'); const wave = document.getElementById('player-wave'); if(icon.innerText === 'pause') { icon.innerText = 'play_arrow'; wave.classList.add('opacity-0'); } else { icon.innerText = 'pause'; wave.classList.remove('opacity-0'); }" title="Play / Pause" type="button"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">pause</span></button></div></aside>
+
+</body></html>

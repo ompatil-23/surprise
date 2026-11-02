@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import confetti from 'canvas-confetti';
 import { useSurprise } from '../context/SurpriseContext';
-import { useAudio } from '../context/AudioContext';
 
 export const BirthdayWishPage = () => {
   const {
@@ -12,14 +11,12 @@ export const BirthdayWishPage = () => {
     setActiveChapter,
   } = useSurprise();
 
-  const { playCelebrationChime } = useAudio();
   const [copied, setCopied] = useState(false);
   const [isEditingNote, setIsEditingNote] = useState(false);
   const [noteContent, setNoteContent] = useState(data.birthdayWish.note);
 
   const handleBlowCandle = () => {
     setCandleBlown(true);
-    playCelebrationChime();
 
     // Trigger Multi-Stage Romantic Confetti & Stardust Sparks
     const end = Date.now() + 2.5 * 1000;
@@ -81,8 +78,22 @@ export const BirthdayWishPage = () => {
       {/* Headings */}
       <div className="text-center max-w-2xl flex flex-col items-center gap-space-xs mb-space-xl">
         <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface tracking-tight">
-          Make a Birthday Wish, {data.partnerName || 'My Love'}
+          Make a Birthday Wish, {data.partnerName || 'Apurva'}
         </h1>
+        <div className="flex items-center gap-2 flex-wrap justify-center mt-1">
+          <span className="text-secondary-fixed text-label-sm font-label-sm bg-surface-container-high px-2.5 py-0.5 rounded-full">
+            ✨ Appu
+          </span>
+          <span className="text-primary-fixed text-label-sm font-label-sm bg-surface-container-high px-2.5 py-0.5 rounded-full">
+            🌸 Johnson Baby
+          </span>
+          <span className="text-tertiary-fixed text-label-sm font-label-sm bg-surface-container-high px-2.5 py-0.5 rounded-full">
+            💖 Gangu
+          </span>
+          <span className="text-secondary-fixed text-label-sm font-label-sm bg-surface-container-high px-2.5 py-0.5 rounded-full">
+            🦉 Ghubad
+          </span>
+        </div>
         <p className="font-body-lg text-body-md md:text-body-lg text-on-surface-variant max-w-xl">
           Close your eyes, breathe in the starlight, and blow out the candle.
         </p>
@@ -220,7 +231,7 @@ export const BirthdayWishPage = () => {
               </div>
 
               <h2 className="font-display-lg text-display-lg-mobile md:text-display-lg text-primary-fixed mb-space-xs">
-                Happy Birthday, {data.partnerName || 'My Love'}! ❤️
+                Happy Birthday, {data.partnerName || 'Apurva'}! (Happy Birthday, Appu!) ❤️
               </h2>
               <p className="font-headline-md text-headline-md text-secondary-fixed max-w-2xl font-normal leading-relaxed mb-space-md font-serif italic">
                 {data.birthdayWish.subheading}

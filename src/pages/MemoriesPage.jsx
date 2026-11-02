@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { useSurprise } from '../context/SurpriseContext';
-import { useAudio } from '../context/AudioContext';
 
 export const MemoriesPage = () => {
   const { data, addMemory, toggleMemoryLike } = useSurprise();
-  const { isPlaying, toggle } = useAudio();
 
   const [selectedYear, setSelectedYear] = useState('all');
   const [filterDropdownOpen, setFilterDropdownOpen] = useState(false);
@@ -37,7 +35,6 @@ export const MemoriesPage = () => {
       year: newYear,
       rotation: (Math.random() * 4 - 2).toFixed(1),
       tapeColor: ['secondary', 'primary', 'tertiary'][Math.floor(Math.random() * 3)],
-      audioDuration: '0:45',
       image: newImage || '/photos/couple_1.png',
     });
 
@@ -199,14 +196,6 @@ export const MemoriesPage = () => {
                         alt={memory.title}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/60 via-transparent to-transparent opacity-40" />
-
-                      {/* Audio Duration Badge */}
-                      {memory.audioDuration && (
-                        <div className="absolute bottom-2.5 right-2.5 flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-secondary">
-                          <span className="material-symbols-outlined text-[13px]">mic</span>
-                          <span className="font-label-sm text-label-sm">{memory.audioDuration}</span>
-                        </div>
-                      )}
                     </div>
 
                     {/* Polaroid Text Area */}
@@ -251,7 +240,7 @@ export const MemoriesPage = () => {
             </div>
           </div>
           <span className="font-label-sm text-label-sm text-secondary tracking-widest uppercase">
-            Tap any polaroid to listen & read
+            Tap any polaroid to view & read our memories
           </span>
         </div>
       </div>

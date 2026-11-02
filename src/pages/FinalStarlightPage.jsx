@@ -259,7 +259,7 @@ ${data.finalStarlight.vowSubheading}
           </span>
         </div>
         <p className="font-body-sm text-body-sm text-on-surface-variant">
-          This realm was woven by hand exclusively for your birthday. Every pixel holds an echo of gratitude.
+          This realm was woven exclusively for Apurva (my Appu, Johnson Baby, Gangu & Ghubad). Every pixel holds all my love.
         </p>
       </div>
 

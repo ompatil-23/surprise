@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useSurprise } from '../context/SurpriseContext';
-import { useAudio } from '../context/AudioContext';
 
 export const LetterPage = () => {
   const {
@@ -12,14 +11,10 @@ export const LetterPage = () => {
     setActiveChapter,
   } = useSurprise();
 
-  const { isPlaying, toggle } = useAudio();
   const [isEditing, setIsEditing] = useState(false);
 
   const handleOpenEnvelope = () => {
     setEnvelopeOpened(true);
-    if (!isPlaying) {
-      toggle();
-    }
   };
 
   const handlePrint = () => {
@@ -175,18 +170,6 @@ export const LetterPage = () => {
             {/* Toolbar Above Stationery */}
             <div className="w-full flex flex-wrap items-center justify-between gap-space-sm mb-space-md px-2">
               <div className="flex items-center gap-space-xs">
-                {/* Audio Melody Toggle */}
-                <button
-                  onClick={toggle}
-                  className="flex items-center gap-2 bg-surface-container-low hover:bg-surface-container-high text-on-surface px-space-md py-2 rounded-full shadow-sm transition-colors text-label-md font-label-md border border-surface-container-high"
-                  type="button"
-                >
-                  <span className="material-symbols-outlined text-secondary text-[18px]">
-                    {isPlaying ? 'graphic_eq' : 'music_note'}
-                  </span>
-                  <span>{isPlaying ? 'Pause Melody ♫' : 'Play Piano Melody ♫'}</span>
-                </button>
-
                 {/* Re-seal Button */}
                 <button
                   onClick={() => setEnvelopeOpened(false)}

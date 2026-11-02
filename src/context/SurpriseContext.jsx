@@ -7,7 +7,7 @@ export const SurpriseProvider = ({ children }) => {
   const [activeChapter, setActiveChapter] = useState('welcome');
   
   // Persistent data stored in localStorage so customizations survive reloads
-  const DATA_VERSION = 'romantic_surprise_data_v3';
+  const DATA_VERSION = 'romantic_surprise_data_v4';
   const [data, setData] = useState(() => {
     try {
       const saved = localStorage.getItem(DATA_VERSION);

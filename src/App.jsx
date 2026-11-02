@@ -1,10 +1,8 @@
 import React from 'react';
 import { SurpriseProvider, useSurprise } from './context/SurpriseContext';
-import { AudioProvider } from './context/AudioContext';
 import { ParticleBackground } from './components/common/ParticleBackground';
 import { Header } from './components/common/Header';
 import { Footer } from './components/common/Footer';
-import { AudioPlayer } from './components/common/AudioPlayer';
 
 // Pages
 import { WelcomePage } from './pages/WelcomePage';
@@ -41,17 +39,14 @@ const ChapterRouter = () => {
 function App() {
   return (
     <SurpriseProvider>
-      <AudioProvider>
-        <div className="bg-surface text-on-surface font-body-md text-body-md selection:bg-primary-container selection:text-on-primary-container relative overflow-x-hidden min-h-screen flex flex-col justify-between">
-          <ParticleBackground />
-          <Header />
-          <main className="relative z-10 w-full pt-20 bg-surface flex-1">
-            <ChapterRouter />
-          </main>
-          <Footer />
-          <AudioPlayer />
-        </div>
-      </AudioProvider>
+      <div className="bg-surface text-on-surface font-body-md text-body-md selection:bg-primary-container selection:text-on-primary-container relative overflow-x-hidden min-h-screen flex flex-col justify-between">
+        <ParticleBackground />
+        <Header />
+        <main className="relative z-10 w-full pt-20 bg-surface flex-1">
+          <ChapterRouter />
+        </main>
+        <Footer />
+      </div>
     </SurpriseProvider>
   );
 }

@@ -52,10 +52,10 @@ export const WhyYouPage = () => {
 
           <div className="relative max-w-3xl">
             <h2 className="font-headline-lg text-headline-lg text-on-surface tracking-tight">
-              A Few Reasons Why You Are My World
+              A Few Reasons Why You Are My World, Apurva
             </h2>
             <p className="font-body-lg text-body-lg text-on-surface-variant mt-space-xs font-light">
-              Out of eight billion people, here is why it is always you.
+              To my Appu, my Johnson Baby, my Gangu, and my Ghubad — out of eight billion people, here is why it is always you.
             </p>
           </div>
 

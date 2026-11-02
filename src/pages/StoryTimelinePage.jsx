@@ -1,23 +1,9 @@
 import React, { useState } from 'react';
 import { useSurprise } from '../context/SurpriseContext';
-import { useAudio } from '../context/AudioContext';
 
 export const StoryTimelinePage = () => {
   const { data, setActiveChapter } = useSurprise();
-  const { isPlaying, toggle, playCelebrationChime } = useAudio();
-  const [playingMilestoneAudio, setPlayingMilestoneAudio] = useState(null);
   const [zoomImage, setZoomImage] = useState(null);
-
-  const toggleMilestoneAudio = (milestoneId) => {
-    if (playingMilestoneAudio === milestoneId) {
-      setPlayingMilestoneAudio(null);
-    } else {
-      setPlayingMilestoneAudio(milestoneId);
-      if (!isPlaying) {
-        toggle();
-      }
-    }
-  };
 
   return (
     <div className="relative w-full overflow-hidden pb-space-xl">
@@ -35,7 +21,7 @@ export const StoryTimelinePage = () => {
             The Constellation of Us
           </h1>
           <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl mt-space-xs font-light">
-            Every single step that brought me closer to you.
+            Every single step that brought me closer to you, Apurva.
           </p>
 
           {/* Metric Accent Pill Grid */}
@@ -83,8 +69,7 @@ export const StoryTimelinePage = () => {
           {/* Render Milestones */}
           {data.timelineMilestones.map((milestone, idx) => {
             const isEven = idx % 2 === 0;
-            const isToday = milestone.id === '4';
-            const isAudioActive = playingMilestoneAudio === milestone.id;
+            const isToday = milestone.id === '6' || idx === data.timelineMilestones.length - 1;
 
             return (
               <div
@@ -96,8 +81,7 @@ export const StoryTimelinePage = () => {
                   <div className="w-full md:w-[46%] pl-12 md:pl-0 md:pr-space-md order-2 md:order-1">
                     <MilestoneCard
                       milestone={milestone}
-                      isAudioActive={isAudioActive}
-                      onToggleAudio={() => toggleMilestoneAudio(milestone.id)}
+                      isToday={isToday}
                       onZoom={() => setZoomImage(milestone.image)}
                     />
                   </div>
@@ -119,14 +103,14 @@ export const StoryTimelinePage = () => {
                   <div
                     className={`w-11 h-11 rounded-full ${
                       isToday
-                        ? 'bg-secondary-container/50 shadow-[0_0_32px_rgba(233,195,73,0.85)] animate-pulse'
-                        : 'bg-surface-container-highest shadow-[0_0_24px_rgba(233,195,73,0.4)]'
-                    } flex items-center justify-center border border-secondary/30`}
+                        ? 'bg-secondary ring-4 ring-secondary/30 shadow-[0_0_24px_rgba(233,195,73,0.8)]'
+                        : 'bg-surface-container-high ring-4 ring-surface-container shadow-md group-hover:ring-secondary/40'
+                    } flex items-center justify-center transition-all duration-300`}
                   >
                     <div
                       className={`w-7 h-7 rounded-full ${
                         isToday
-                          ? 'bg-secondary text-on-secondary'
+                          ? 'bg-on-secondary text-secondary'
                           : milestone.accent === 'primary'
                           ? 'bg-primary text-on-primary'
                           : milestone.accent === 'tertiary'
@@ -166,9 +150,7 @@ export const StoryTimelinePage = () => {
                   <div className="w-full md:w-[46%] pl-12 md:pl-space-md order-2 md:order-3">
                     <MilestoneCard
                       milestone={milestone}
-                      isAudioActive={isAudioActive}
                       isToday={isToday}
-                      onToggleAudio={() => toggleMilestoneAudio(milestone.id)}
                       onZoom={() => setZoomImage(milestone.image)}
                     />
                   </div>
@@ -178,25 +160,31 @@ export const StoryTimelinePage = () => {
           })}
         </div>
 
-        {/* Bottom CTA to next chapter */}
-        <div className="mt-space-lg flex justify-center">
+        {/* Milestone Footnote & Next Chapter Button */}
+        <div className="mt-space-xl flex flex-col items-center text-center">
+          <div className="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md mb-space-md">
+            <span className="w-2 h-2 rounded-full bg-secondary" />
+            <span>Every memory with Appu is etched into eternity</span>
+            <span className="w-2 h-2 rounded-full bg-secondary" />
+          </div>
+
           <button
             onClick={() => setActiveChapter('a-letter')}
-            className="px-8 py-3 rounded-full bg-gradient-to-r from-primary-container to-surface-bright text-on-surface font-title-md text-title-md hover:shadow-[0_0_25px_rgba(226,132,158,0.5)] transition-all flex items-center gap-2"
+            className="px-8 py-3 rounded-full bg-gradient-to-r from-primary-container via-surface-bright to-primary-container text-on-surface font-title-md text-title-md shadow-lg hover:shadow-xl transition-all flex items-center gap-2 font-semibold"
           >
-            <span>Proceed to Chapter 04: A Letter From My Heart</span>
-            <span className="material-symbols-outlined text-[20px]">arrow_forward</span>
+            <span>Read Your Sealed Birthday Letter</span>
+            <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
           </button>
         </div>
       </div>
 
-      {/* Image Zoom Lightbox */}
+      {/* Lightbox Modal for Milestone Zoom */}
       {zoomImage && (
         <div
           onClick={() => setZoomImage(null)}
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-surface-container-lowest/90 backdrop-blur-2xl cursor-pointer"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-surface-container-lowest/90 backdrop-blur-xl cursor-pointer"
         >
-          <div className="relative max-w-3xl w-full">
+          <div className="relative max-w-2xl w-full">
             <img src={zoomImage} alt="Zoomed milestone" className="w-full rounded-xl shadow-2xl" />
             <button className="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container text-on-surface flex items-center justify-center">
               <span className="material-symbols-outlined text-[18px]">close</span>
@@ -209,7 +197,7 @@ export const StoryTimelinePage = () => {
 };
 
 // Milestone Card Subcomponent
-const MilestoneCard = ({ milestone, isAudioActive, isToday, onToggleAudio, onZoom }) => {
+const MilestoneCard = ({ milestone, isToday, onZoom }) => {
   return (
     <div
       className={`rounded-xl p-space-md shadow-xl transition-all duration-300 hover:-translate-y-1 ${
@@ -279,39 +267,6 @@ const MilestoneCard = ({ milestone, isAudioActive, isToday, onToggleAudio, onZoo
           "{milestone.quote}"
         </p>
       </div>
-
-      {/* Audio Snippet Controller */}
-      {milestone.audioNote && (
-        <div className="mt-space-sm pt-space-xs flex items-center justify-between bg-surface-container-lowest/85 rounded-full px-space-sm py-1.5 border border-surface-container-high/50">
-          <div className="flex items-center gap-space-xs">
-            <button
-              onClick={onToggleAudio}
-              type="button"
-              className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-sm hover:scale-105 transition-transform"
-            >
-              <span className="material-symbols-outlined text-[18px]">
-                {isAudioActive ? 'pause' : 'play_arrow'}
-              </span>
-            </button>
-            <div className="flex flex-col text-left">
-              <span className="font-label-sm text-label-sm text-on-surface font-semibold">
-                Voice memo from that day
-              </span>
-              <span className="font-label-sm text-label-sm text-on-surface-variant truncate max-w-[200px]">
-                {milestone.audioNote}
-              </span>
-            </div>
-          </div>
-
-          {/* Mini Waveform */}
-          <div className={`flex items-end gap-1 h-4 px-2 ${isAudioActive ? 'is-playing' : 'is-paused'}`}>
-            <span className="w-1 bg-secondary rounded-full sound-bar-1" />
-            <span className="w-1 bg-primary rounded-full sound-bar-2" />
-            <span className="w-1 bg-tertiary rounded-full sound-bar-3" />
-            <span className="w-1 bg-secondary rounded-full sound-bar-2" />
-          </div>
-        </div>
-      )}
 
       {/* Handwritten Keepsake Note */}
       {milestone.note && (

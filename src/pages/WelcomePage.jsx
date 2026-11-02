@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { useSurprise } from '../context/SurpriseContext';
-import { useAudio } from '../context/AudioContext';
 
 export const WelcomePage = () => {
   const { data, updatePartnerName, setActiveChapter, waxSealBroken, setWaxSealBroken } = useSurprise();
-  const { isPlaying, toggle } = useAudio();
   const [modalOpen, setModalOpen] = useState(false);
   const [isEditingName, setIsEditingName] = useState(false);
   const [tempName, setTempName] = useState(data.partnerName);
@@ -12,9 +10,6 @@ export const WelcomePage = () => {
   const handleOpenSurprise = () => {
     setWaxSealBroken(true);
     setModalOpen(true);
-    if (!isPlaying) {
-      toggle();
-    }
   };
 
   const handleNameSave = () => {
@@ -35,7 +30,7 @@ export const WelcomePage = () => {
 
       <div className="relative z-10 max-w-[1080px] w-full mx-auto flex flex-col items-center text-center">
         {/* Top Badge */}
-        <div className="inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-high/70 backdrop-blur-md shadow-md mb-space-lg border border-surface-container-highest/60">
+        <div className="inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-high/70 backdrop-blur-md shadow-md mb-space-md border border-surface-container-highest/60">
           <span className="w-2 h-2 rounded-full bg-secondary-fixed animate-pulse" />
           <span className="font-label-md text-label-md text-secondary-fixed tracking-widest uppercase">
             Secret Edition • Chapter I
@@ -45,7 +40,7 @@ export const WelcomePage = () => {
           </span>
         </div>
 
-        {/* Hero Title with Customizable Girlfriend Name */}
+        {/* Hero Title with Apurva */}
         <div className="flex flex-col items-center gap-space-xs max-w-3xl">
           <div className="flex items-center justify-center gap-2 flex-wrap">
             <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-primary-fixed tracking-tight drop-shadow-[0_4px_24px_rgba(226,132,158,0.25)]">
@@ -66,7 +61,7 @@ export const WelcomePage = () => {
                   title="Click to edit name"
                   className="italic text-secondary-fixed cursor-pointer hover:underline decoration-secondary/50 underline-offset-8"
                 >
-                  {data.partnerName}
+                  {data.partnerName || 'Apurva'}
                 </span>
               )}
               <span className="inline-block text-primary align-middle ml-2 select-none">
@@ -80,8 +75,24 @@ export const WelcomePage = () => {
             </h1>
           </div>
 
+          {/* Affectionate Nicknames Showcase */}
+          <div className="flex items-center justify-center gap-2 flex-wrap my-2">
+            <span className="px-3 py-1 rounded-full bg-surface-container-low/90 border border-secondary/30 text-secondary-fixed font-title-md text-[14px] shadow-sm">
+              ✨ Appu
+            </span>
+            <span className="px-3 py-1 rounded-full bg-surface-container-low/90 border border-primary/30 text-primary-fixed font-title-md text-[14px] shadow-sm">
+              🌸 Johnson Baby
+            </span>
+            <span className="px-3 py-1 rounded-full bg-surface-container-low/90 border border-tertiary/30 text-tertiary-fixed font-title-md text-[14px] shadow-sm">
+              💖 Gangu
+            </span>
+            <span className="px-3 py-1 rounded-full bg-surface-container-low/90 border border-secondary/30 text-secondary-fixed font-title-md text-[14px] shadow-sm">
+              🦉 Ghubad
+            </span>
+          </div>
+
           <p className="font-headline-md text-headline-md text-on-surface-variant italic max-w-xl">
-            “Someone has made a little world just for you.”
+            “Someone has made a little world just for you, my favorite person.”
           </p>
         </div>
 
@@ -144,7 +155,7 @@ export const WelcomePage = () => {
 
               {/* Parcel Footer */}
               <div className="relative z-10 flex items-center justify-between text-on-surface-variant">
-                <span className="font-label-sm text-label-sm">Destination: Her Heart</span>
+                <span className="font-label-sm text-label-sm">Destination: Apurva's Heart (My Appu)</span>
                 <div className="flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-secondary" />
                   <span className="w-1.5 h-1.5 rounded-full bg-primary" />
@@ -168,7 +179,7 @@ export const WelcomePage = () => {
               stars
             </span>
             <span className="font-title-md text-title-md text-on-surface tracking-wider uppercase font-semibold">
-              Open Your Surprise
+              Open Your Surprise, Appu
             </span>
             <span className="material-symbols-outlined text-on-surface text-[20px] group-hover:translate-x-1 transition-transform duration-200">
               arrow_forward
@@ -182,7 +193,7 @@ export const WelcomePage = () => {
               className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-low shadow-sm hover:bg-surface-container transition-colors"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-secondary" />
-              <span className="font-label-sm text-label-sm text-on-surface">6 Memory Capsules</span>
+              <span className="font-label-sm text-label-sm text-on-surface">15 Polaroids of Us</span>
             </button>
             <button
               onClick={() => setActiveChapter('a-letter')}
@@ -196,37 +207,9 @@ export const WelcomePage = () => {
               className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-low shadow-sm hover:bg-surface-container transition-colors"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-tertiary" />
-              <span className="font-label-sm text-label-sm text-on-surface">The Candle Wish</span>
+              <span className="font-label-sm text-label-sm text-on-surface">The Birthday Candle</span>
             </button>
           </div>
-
-          {/* Audio hint */}
-          <div className="flex items-center justify-center gap-space-sm px-space-md py-2 rounded-full bg-surface-container-low/60 backdrop-blur-sm mt-space-xs border border-surface-container-high/40">
-            <div className="flex items-center gap-1.5 text-secondary">
-              <span className="material-symbols-outlined text-[18px]">headphones</span>
-              <div className={`sound-bars-indicator flex items-end gap-0.5 h-3 px-0.5 ${isPlaying ? 'is-playing' : 'is-paused'}`}>
-                <span className="w-0.5 bg-secondary rounded-full sound-bar-1" />
-                <span className="w-0.5 bg-primary rounded-full sound-bar-2" />
-                <span className="w-0.5 bg-secondary rounded-full sound-bar-3" />
-              </div>
-            </div>
-            <span className="font-body-sm text-body-sm text-on-surface-variant">
-              Best experienced with your headphones on
-            </span>
-          </div>
-
-          <button
-            onClick={toggle}
-            className="flex items-center gap-2 text-on-surface-variant hover:text-secondary transition-colors text-label-sm font-label-sm px-space-sm py-1 rounded-lg"
-            type="button"
-          >
-            <span className="material-symbols-outlined text-[16px] text-secondary">
-              {isPlaying ? 'pause_circle' : 'play_circle'}
-            </span>
-            <span>
-              {isPlaying ? 'Ambient Melody: Playing (Click to Pause)' : 'Ambient Melody: Nocturne in Rose (Click to Play)'}
-            </span>
-          </button>
         </div>
       </div>
 
@@ -246,7 +229,7 @@ export const WelcomePage = () => {
             </div>
             <h2 className="font-title-lg text-title-lg text-on-surface mb-1">Treasured Vault</h2>
             <p className="font-body-sm text-body-sm text-on-surface-variant">
-              Revisit the candid smiles, midnight talks, and starlit journeys we have shared together.
+              Revisit our candid smiles, late-night laughs with Ghubad, and quiet moments together.
             </p>
           </div>
           <div className="mt-space-md overflow-hidden rounded-lg shadow-sm">
@@ -272,7 +255,7 @@ export const WelcomePage = () => {
             </div>
             <h2 className="font-title-lg text-title-lg text-on-surface mb-1">Handwritten Truths</h2>
             <p className="font-body-sm text-body-sm text-on-surface-variant">
-              Unfold a slow, tender parchment letter recounting every silent thought I have kept for you.
+              Unfold a slow, tender parchment letter recounting everything I feel for you, Apurva.
             </p>
           </div>
           <div className="mt-space-md overflow-hidden rounded-lg shadow-sm">
@@ -322,11 +305,14 @@ export const WelcomePage = () => {
             <span className="font-label-md text-label-md text-secondary-fixed uppercase tracking-widest mb-1">
               Wax Seal Broken
             </span>
-            <h3 className="font-headline-lg text-headline-lg text-on-surface mb-space-xs">
-              Welcome to Your Galaxy
+            <h3 className="font-headline-lg text-headline-lg text-on-surface mb-1">
+              Welcome to Your Galaxy, Apurva
             </h3>
-            <p className="font-body-md text-body-md text-on-surface-variant max-w-sm mb-space-lg">
-              Take your time, breathe in, and turn your sound on. Every star in this universe was put here to celebrate your birthday.
+            <span className="text-primary font-label-md text-label-md italic mb-space-xs">
+              To my Appu • Johnson Baby • Gangu • Ghubad
+            </span>
+            <p className="font-body-md text-body-md text-on-surface-variant max-w-sm mb-space-lg leading-relaxed">
+              Take your time and smile. Every single star in this little universe was hand-crafted to celebrate your birthday, my love.
             </p>
 
             <div className="w-full flex flex-col sm:flex-row items-center gap-space-sm justify-center">
